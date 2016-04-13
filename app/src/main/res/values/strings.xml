@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">JobInterview</string>
+    <string name="title_activity_starting_station">StartingStationActivity</string>
+</resources>

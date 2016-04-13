@@ -1,0 +1,488 @@
+{
+  "album_offset": 0,
+  "albums": [
+    {
+      "artists": [
+        {
+          "id": 51076450,
+          "name": "Adele",
+          "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/25/02/70861034.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+          "valid": true
+        }
+      ],
+      "available": true,
+      "company": "",
+      "cover": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/08/08/72091841.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+      "id": 2678763,
+      "name": "Hello",
+      "num_tracks": 1,
+      "release_date": "2015-10-23",
+      "type": "EP/单曲"
+    },
+    {
+      "artists": [
+        {
+          "id": 61552620,
+          "name": "Madilyn Bailey",
+          "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/30/23/70789181.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+          "valid": true
+        }
+      ],
+      "available": true,
+      "company": "",
+      "cover": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/01/14/72111581.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+      "id": 2684632,
+      "name": "Hello",
+      "num_tracks": 1,
+      "release_date": "2015-12-10",
+      "type": "EP/单曲"
+    },
+    {
+      "artists": [
+        {
+          "id": 51072144,
+          "name": "Christina Milian",
+          "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/23/16/70079212.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+          "valid": true
+        },
+        {
+          "id": 51076291,
+          "name": "Lil Wayne",
+          "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/16/16/70803892.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+          "valid": true
+        },
+        {
+          "id": 60015475,
+          "name": "Stafford Brothers",
+          "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/25/10/70651195.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+          "valid": true
+        }
+      ],
+      "available": true,
+      "company": "",
+      "cover": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/10/06/70973766.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+      "id": 2407301,
+      "name": "Hello",
+      "num_tracks": 1,
+      "release_date": "2012-12-18",
+      "type": "EP/单曲"
+    },
+    {
+      "artists": [
+        {
+          "id": 51039332,
+          "name": "徳永英明",
+          "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/06/21/71072187.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+          "valid": true
+        }
+      ],
+      "available": true,
+      "company": "",
+      "cover": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/16/04/70792825.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+      "id": 2368366,
+      "name": "Hello",
+      "num_tracks": 4,
+      "release_date": "2009-08-19",
+      "type": "EP/单曲"
+    },
+    {
+      "artists": [
+        {
+          "id": 61016139,
+          "name": "Neon Hitch",
+          "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/11/14/70571108.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+          "valid": true
+        }
+      ],
+      "available": true,
+      "company": "",
+      "cover": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/02/24/71144196.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+      "id": 2511419,
+      "name": "Hello",
+      "num_tracks": 1,
+      "release_date": "2014-01-05",
+      "type": "EP/单曲"
+    }
+  ],
+  "artist_offset": 0,
+  "artists": [
+    {
+      "id": 60006576,
+      "name": "Hello",
+      "num_albums": 4,
+      "num_tracks": 21,
+      "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/20/30/72136710.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+      "valid": true
+    },
+    {
+      "id": 61688843,
+      "name": "Hello Nico",
+      "num_albums": 2,
+      "num_tracks": 16,
+      "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/17/06/71523744.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+      "valid": true
+    },
+    {
+      "id": 61507169,
+      "name": "Hello Hawk",
+      "num_albums": 1,
+      "num_tracks": 10,
+      "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/21/17/70845902.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+      "valid": true
+    },
+    {
+      "id": 61545381,
+      "name": "Hello Venus",
+      "num_albums": 9,
+      "num_tracks": 29,
+      "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/03/08/70746002.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+      "valid": true
+    },
+    {
+      "id": 61479827,
+      "name": "Hello Kitty",
+      "num_albums": 2,
+      "num_tracks": 27,
+      "portrait": "http://pic.cdn.duomi.com/imageproxy2/dimgm/scaleImage?url=http://img.kxting.cn//p1/08/06/70707753.jpg&w=150&h=150&s=100&c=0&o=0&m=",
+      "valid": true
+    }
+  ],
+  "dm_error": 0,
+  "error_msg": "操作成功",
+  "recommend": 0,
+  "total_albums": 380,
+  "total_artists": 21,
+  "total_tracks": 4454,
+  "track_offset": 0,
+  "tracks": [
+    {
+      "album": {
+        "cover": "/p1/08/15/70882035.jpg",
+        "id": 2418765,
+        "name": "Heartbreaker"
+      },
+      "artists": [
+        {
+          "id": 61012184,
+          "name": "Sandara(2NE1)",
+          "num_albums": 3,
+          "num_tracks": 8,
+          "portrait": "/p1/03/13/71129038.jpg",
+          "valid": true
+        },
+        {
+          "id": 60032078,
+          "name": "权志龙",
+          "num_albums": 11,
+          "num_tracks": 57,
+          "portrait": "/p1/10/03/71134935.jpg",
+          "valid": true
+        }
+      ],
+      "availability": "1110",
+      "dlyric": "",
+      "id": 24551903,
+      "medias": [
+        {
+          "bitrate": 320,
+          "p2purl": "2688C9A423785461AB050000007A214D3300000040.mp3"
+        }
+      ],
+      "mv": 0,
+      "slyric": "",
+      "title": "Hello",
+      "isdown": "1",
+      "isplay": "1"
+    },
+    {
+      "album": {
+        "cover": "/p1/12/15/70891308.jpg",
+        "id": 2426725,
+        "name": "The Second Mini Album 여보세요"
+      },
+      "artists": [
+        {
+          "id": 61538419,
+          "name": "NU'EST",
+          "num_albums": 9,
+          "num_tracks": 36,
+          "portrait": "/p1/21/15/71264340.jpg",
+          "valid": true
+        }
+      ],
+      "availability": "1110",
+      "dlyric": "",
+      "id": 25479860,
+      "medias": [
+        {
+          "bitrate": 320,
+          "p2purl": "F1FF644C33D284611F0500000080E36810000000AF.mp3"
+        }
+      ],
+      "mv": 0,
+      "slyric": "static/17/07/91550488.txt",
+      "title": "여보세요",
+      "isdown": "1",
+      "isplay": "1"
+    },
+    {
+      "artists": [
+        {
+          "id": 61434247,
+          "name": "许阁",
+          "num_albums": 28,
+          "num_tracks": 70,
+          "portrait": "/p1/14/25/71146936.jpg",
+          "valid": true
+        }
+      ],
+      "availability": "1110",
+      "dlyric": "",
+      "id": 23788755,
+      "medias": [
+        {
+          "bitrate": 128,
+          "p2purl": "81E72FCF732C3EB369050000003DB3EAD8000000E1.mp3"
+        }
+      ],
+      "mv": 0,
+      "slyric": "static/30/22/91044086.txt",
+      "title": "Hello",
+      "isdown": "1",
+      "isplay": "1"
+    },
+    {
+      "album": {
+        "cover": "/p1/25/21/71627478.jpg",
+        "id": 2607414,
+        "name": "Black Label"
+      },
+      "artists": [
+        {
+          "id": 61567237,
+          "name": "Fiestar",
+          "num_albums": 12,
+          "num_tracks": 25,
+          "portrait": "/p1/14/07/71252584.jpg",
+          "valid": true
+        }
+      ],
+      "availability": "1110",
+      "dlyric": "",
+      "id": 27214304,
+      "medias": [
+        {
+          "bitrate": 320,
+          "p2purl": "6AC4443A0481D78058050000007D27C0B5000000C5.mp3"
+        }
+      ],
+      "mv": 0,
+      "slyric": "",
+      "title": "Hello",
+      "isdown": "1",
+      "isplay": "1"
+    },
+    {
+      "album": {
+        "cover": "/p1/20/10/71150848.jpg",
+        "id": 2517427,
+        "name": "뛰뛰빵빵"
+      },
+      "artists": [
+        {
+          "id": 61538822,
+          "name": "BTOB",
+          "num_albums": 25,
+          "num_tracks": 99,
+          "portrait": "/p1/28/01/70741408.jpg",
+          "valid": true
+        }
+      ],
+      "availability": "1110",
+      "dlyric": "",
+      "id": 26290502,
+      "medias": [
+        {
+          "bitrate": 320,
+          "p2purl": "C12B94BD6E489866A40500000073A417D1000000EE.mp3"
+        }
+      ],
+      "mv": 0,
+      "slyric": "static/30/03/92195766.txt",
+      "title": "여보세요",
+      "isdown": "1",
+      "isplay": "1"
+    },
+    {
+      "album": {
+        "cover": "/p1/25/26/71206436.jpg",
+        "id": 2460790,
+        "name": "No.1"
+      },
+      "artists": [
+        {
+          "id": 61007418,
+          "name": "Teen Top",
+          "num_albums": 16,
+          "num_tracks": 68,
+          "portrait": "/p1/10/30/71157534.jpg",
+          "valid": true
+        }
+      ],
+      "availability": "1110",
+      "dlyric": "",
+      "id": 25484987,
+      "medias": [
+        {
+          "bitrate": 320,
+          "p2purl": "9DB0CB4744AFA9B8910500000083EE653A00000084.mp3"
+        }
+      ],
+      "mv": 0,
+      "slyric": "static/23/05/91587446.txt",
+      "title": "Hello",
+      "isdown": "1",
+      "isplay": "1"
+    },
+    {
+      "album": {
+        "cover": "/p1/13/26/71234882.jpg",
+        "id": 2502948,
+        "name": "Blue Spring"
+      },
+      "artists": [
+        {
+          "id": 60036249,
+          "name": "History",
+          "num_albums": 7,
+          "num_tracks": 32,
+          "portrait": "/p1/02/32/71134865.jpg",
+          "valid": true
+        }
+      ],
+      "availability": "1110",
+      "dlyric": "",
+      "id": 26167751,
+      "medias": [
+        {
+          "bitrate": 320,
+          "p2purl": "BE5A0CF108F6322D45050000007A5856E900000021.mp3"
+        }
+      ],
+      "mv": 0,
+      "slyric": "static/05/08/92620844.txt",
+      "title": "Hello",
+      "isdown": "1",
+      "isplay": "1"
+    },
+    {
+      "album": {
+        "cover": "/p1/17/25/72140830.jpg",
+        "id": 2692382,
+        "name": "교감"
+      },
+      "artists": [
+        {
+          "id": 61435851,
+          "name": "郑容和",
+          "num_albums": 3,
+          "num_tracks": 41,
+          "portrait": "/p1/17/09/70893018.jpg",
+          "valid": true
+        },
+        {
+          "id": 61658480,
+          "name": "单于贞雅",
+          "num_albums": 5,
+          "num_tracks": 35,
+          "portrait": "/p1/05/23/70574450.jpg",
+          "valid": true
+        }
+      ],
+      "availability": "1110",
+      "dlyric": "",
+      "id": 27743102,
+      "medias": [
+        {
+          "bitrate": 320,
+          "p2purl": "1DF053E32F87ABD99A0500000081C467E30000000C.mp3"
+        }
+      ],
+      "mv": 0,
+      "slyric": "",
+      "title": "입김(Hello)",
+      "isdown": "1",
+      "isplay": "1"
+    },
+    {
+      "album": {
+        "cover": "/p1/07/12/72077952.jpg",
+        "id": 2675087,
+        "name": "The Gavy Nj'S 7th Album Part.1 'Hello'"
+      },
+      "artists": [
+        {
+          "id": 60028626,
+          "name": "Gavy N.J.",
+          "num_albums": 40,
+          "num_tracks": 157,
+          "portrait": "/p1/19/10/70560049.jpg",
+          "valid": true
+        },
+        {
+          "id": 61700380,
+          "name": "Hip Job",
+          "num_albums": 1,
+          "num_tracks": 4,
+          "portrait": "/p1/14/25/71583757.jpg",
+          "valid": true
+        }
+      ],
+      "availability": "1110",
+      "dlyric": "",
+      "id": 27639009,
+      "medias": [
+        {
+          "bitrate": 320,
+          "p2purl": "9FFE02E16D2D67761305000000905F2E9F00000016.mp3"
+        }
+      ],
+      "mv": 0,
+      "slyric": "",
+      "title": "Hello(完整版)",
+      "isdown": "1",
+      "isplay": "1"
+    },
+    {
+      "album": {
+        "cover": "/p1/23/21/70539996.jpg",
+        "id": 2140450,
+        "name": "Super Vocal"
+      },
+      "artists": [
+        {
+          "id": 61617803,
+          "name": "A.T(韩国)",
+          "num_albums": 3,
+          "num_tracks": 7,
+          "portrait": "/p1/18/08/70568759.jpg",
+          "valid": true
+        }
+      ],
+      "availability": "1110",
+      "dlyric": "",
+      "id": 20568785,
+      "medias": [
+        {
+          "bitrate": 192,
+          "p2purl": "3D811519264BDF974105000000577BCB7200000013.mp3"
+        }
+      ],
+      "mv": 0,
+      "slyric": "",
+      "title": "Hello",
+      "isdown": "1",
+      "isplay": "1"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:stretchColumns="1">
+    <!-- stretchColumns 要拉伸的索引列。从0开始，指定多列则多列平分 -->
+    <TableRow>
+        <TextView
+            android:text="第1行第1列" android:layout_column="1"/>
+        <TextView
+            android:text="第1行第2列"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="第2行第1列"/>
+        <TextView
+            android:text="第2行第2列"/>
+        <TextView
+            android:text="第2行第3列"/>
+    </TableRow>
+</TableLayout>

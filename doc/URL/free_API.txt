@@ -1,0 +1,2 @@
+多米音乐接口
+http://v5.pc.duomi.com/search-ajaxsearch-searchall?kw=关键字&pi=页码&pz=每页音乐数

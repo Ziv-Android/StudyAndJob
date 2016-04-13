@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--垂直进度条的设置-->
+<clip xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@mipmap/ic_launcher"
+    android:clipOrientation="vertical"
+    android:gravity="top">
+</clip>

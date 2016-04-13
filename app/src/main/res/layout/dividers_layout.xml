@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android3.0及以上版本LinearLayout支持显示分割线
+ none:不显示分割线
+ beginning:Layout开始(顶边)
+ end:Layout结尾(底边)
+ middle:两个组件之间 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:showDividers="middle">
+
+    <!-- Android3.0以下的版本，手动放置ImageView解决 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#F00"/>
+</LinearLayout>
