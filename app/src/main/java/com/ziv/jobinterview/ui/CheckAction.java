@@ -23,7 +23,7 @@ public class CheckAction {
         Intent intent = new Intent("com.android.phone.action.TOUCH_DIALER");
         // 在系统中查询执行的Activity Action
         List<ResolveInfo> resolveInfos = packageManager.queryIntentActivities(intent,
-                PackageManager.GET_ACTIVITIES);
+                PackageManager.GET_INTENT_FILTERS);
         // 如果没有返回任何结果，表明系统中没有指定的Activity Action
         if (resolveInfos.size() == 0) {
             Log.d("Action", "Activity不存在");
