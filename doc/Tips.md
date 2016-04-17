@@ -46,7 +46,11 @@ xmlns:你自己定义的名称="http://schemas.android.com/apk/res/你程序的p
 Java开头，后面更调用NDK方法的Java类全名(package + class)，最后才是实际的方法名
 前两个参数类型必须是当前NDK环境的对象指针JNIEnv* 和调用当前NDK方法的Java对象jobject
 
-
+###Activity之间的传值方式
+1 Intent对象
+2 静态变量
+3 剪切板
+4 全局对象
 
 
 

@@ -12,6 +12,14 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        ndk {
+            moduleName "NdkTest" //定义NDKlibrary的名字
+            cFlags "-DANDROID_NDK -D_DEBUG DNULL=0" // Define some macros
+            ldLibs "EGL", "GLESv3", "dl", "log"      // Link with these libraries!添加log库，看自己需求
+            stl "stlport_shared"                      // Use shared stlport library
+
+        }
     }
     buildTypes {
         release {
@@ -22,9 +30,37 @@ android {
 //    sourceSets {
 //        main.java.srcDirs += 'src/main/kotlin'
 //    }
+
+    // 这里设置目录，默认就这样写就可以了
+    sourceSets {
+        main {
+            jni.srcDir "src/main/jni"
+            jniLibs.srcDir "src/main/libs"
+        }
+    }
+
     dexOptions {
         incremental true
     }
+
+    productFlavors {
+        x86 {
+            ndk {
+                abiFilter "x86"
+            }
+        }
+        arm {
+            ndk {
+                abiFilter "armeabi-v7a"
+            }
+        }
+        mips {
+            ndk {
+                abiFilter "mips"
+            }
+        }
+    }
+
 }
 //buildscript{
 //    repositries{
