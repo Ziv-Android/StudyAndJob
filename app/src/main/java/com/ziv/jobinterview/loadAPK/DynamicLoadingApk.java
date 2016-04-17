@@ -1,4 +1,4 @@
-package com.ziv.jobinterview.loadAPK;
+package com.ziv.jobinterview.loadapk;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
