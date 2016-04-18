@@ -1,4 +1,4 @@
-package com.ziv.jobinterview.broadcastreceiver;
+package com.ziv.jobinterview.broadcast.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
