@@ -52,6 +52,37 @@ Java开头，后面更调用NDK方法的Java类全名(package + class)，最后�
 3 剪切板
 4 全局对象
 
+###拦截手机屏幕休眠与唤醒的广播注意点
+只能在代码中动态注册，不能在AndroidManifest.xml中注册
+休眠状态：Intent.ACTION_SCREEN_ON
+唤醒状态：Intent.ACTION_SCREEN_OFF
+
+###Service生命周期
+onCreate和onStart平级，onCreate方法调用不可控，stopServer方法调用onDestroy，再启动Service不一定调用onCreate
+
+###AIDL服务（进程间通信）
+##AIDL支持的数据类型：
+1 Java的简单类型(int、char、boolean等)。不需要导入(import)
+2 String和CharSequence。不需要导入(import)
+3 List和Map。但要注意，List和Map对象的元素类型必须是AIDL服务支持的数据类型。不需要导入(import)
+4 AIDL自动生成的接口。需要导入(import)
+5 实现android.os.Parcelable接口的类。需要导入(import)
+
+###ContentProvider URI的组成
+content://authority/path/param
+
+###自定义ContentProvider
+1 编写一个类，继承自ContentProvider，并实现ContentProvider类中的所有抽象方法
+2 定义ContentProvider的URI。URI的形式为content://authority/path/param
+3 在static块中使用UriMatcher对象映射Uri和返回码
+4 根据实际的需要，使用UriMatcher.match方法将URI映射成与URI对应的代码，实现具体相应的方法
+5 在AndroidManifest.xml文件中使用<provider>标签注册ContentProvider，可自定义读取与访问权限
+
+###Windows控制台中查看Android系统中列出的所有权限——必须连接Android设备
+adb <-d><-s emulator-5554> shell pm list permissions
+注：<> 中参数可略
+    <-d> 列出USB Android设备中的权限列表
+    <-s emulator-5554> 列出指定Android设备中的权限列表
 
 
 
