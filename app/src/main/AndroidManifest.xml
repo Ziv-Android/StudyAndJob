@@ -4,6 +4,8 @@
     >
 
     <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -39,6 +41,18 @@
         </activity>
         <activity android:name=".clipboard.GetMsgFromClipboardActivity">
         </activity>
+        <!-- 接收短信的广播 -->
+        <receiver android:name=".broadcastreceiver.ShortMessageReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <!--注册接收来电广播-->
+        <receiver android:name=".broadcastreceiver.InCallReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
