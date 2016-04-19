@@ -86,6 +86,10 @@ adb <-d><-s emulator-5554> shell pm list permissions
 
 
 
+
+
+
+
 ###内存泄漏
 ##常见原因
 1 查询数据库后没有关闭游标cursor
