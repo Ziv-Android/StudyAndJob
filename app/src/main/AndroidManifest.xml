@@ -4,12 +4,20 @@
     >
 
     <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <!--获取手机通话状态-->
+    <!-- 获取手机通话状态 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <!--读取联系人信息-->
+    <!-- 读取联系人信息 -->
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <!--自定义Provider权限-->
+    <!-- 自定义Provider权限 -->
     <uses-permission android:name="com.ziv.jobinterview.provider.permission.MyContentProvider"/>
+
+    <permission
+        android:name="com.ziv.jobinterview.provider.permission.MyContentProvider"
+        android:description="@string/app_name"
+        android:label="@string/app_name"
+        android:protectionLevel="normal"
+        />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -45,9 +53,11 @@
         </activity>
         <activity android:name=".clipboard.GetMsgFromClipboardActivity">
         </activity>
-
-        <activity android:name=".dialog.AlertDialogActivity" android:label="@string/app_name"
-                  android:theme="@android:style/Theme.Dialog"/>
+        <activity
+            android:name=".dialog.AlertDialogActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Dialog"
+            />
 
         <!-- 接收短信的广播 -->
         <receiver
@@ -58,7 +68,7 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
             </intent-filter>
         </receiver>
-        <!--注册接收来电广播-->
+        <!-- 注册接收来电广播 -->
         <receiver
             android:name=".broadcast.receiver.InCallReceiver"
             android:enabled="true"
@@ -68,7 +78,7 @@
             </intent-filter>
         </receiver>
 
-        <!--开机启动广播-->
+        <!-- 开机启动广播 -->
         <receiver android:name=".broadcast.receiver.StartupReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
@@ -80,13 +90,13 @@
             android:authorities="com.ziv.jobinterview.provider.MyContentProvider"
             android:readPermission="com.ziv.jobinterview.provider.permission.MyContentProvider"
             />
-    </application>
 
-    <permission
-        android:name="com.ziv.jobinterview.provider.permission.MyContentProvider"
-        android:description="@string/app_name"
-        android:label="@string/app_name"
-        android:protectionLevel="normal"
-        />
+        <activity
+            android:name=".dialog.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+        </activity>
+    </application>
 
 </manifest>
