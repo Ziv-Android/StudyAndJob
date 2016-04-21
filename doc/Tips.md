@@ -84,6 +84,9 @@ adb <-d><-s emulator-5554> shell pm list permissions
     <-d> 列出USB Android设备中的权限列表
     <-s emulator-5554> 列出指定Android设备中的权限列表
 
+###Toast相关
+Android系统内部使用队列管理多个Toast，show方法将toast加入队列。
+(需反射)Toast.TN.show和Toast.TN.hide直接显示与关闭Toast信息框
 
 
 
