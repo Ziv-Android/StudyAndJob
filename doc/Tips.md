@@ -95,7 +95,20 @@ Android系统内部使用队列管理多个Toast，show方法将toast加入队�
 ###菜单Menu
 与菜单Item关联Activity，但若菜单项的点击事件返回true，则关联失效
 
+###SDK支持的文件数据存储技术都有哪些
+SharedPreferences                                                    保存Key-Value类型数据      /data/data/packagename/shared_prefs
+openFileOutput/openFileInput或FileInputStream/FileOutputStream       流文件            
+Xml                                                                  半结构化存储
+Json                                                                 保存数组或对象
+数据库                                                               保存结构化数据
+第三方面向对象数据库                                                 保存Java对象
 
+###如何确定Java反射需要修改的变量名
+首先需要Android SDK源代码，然后通过变量名获取实现的类名的方法
+Field field = ContextWrapper.class.getDeclaredField("mBase");
+field.setAccessible(true);
+// 输出mBase变量的类名
+Log.d("ziv","className = " + obj.getClass().getName());
 
 
 
