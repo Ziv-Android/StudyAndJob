@@ -96,8 +96,8 @@ Android系统内部使用队列管理多个Toast，show方法将toast加入队�
 与菜单Item关联Activity，但若菜单项的点击事件返回true，则关联失效
 
 ###SDK支持的文件数据存储技术都有哪些
-SharedPreferences                                                    保存Key-Value类型数据      /data/data/packagename/shared_prefs
-openFileOutput/openFileInput或FileInputStream/FileOutputStream       流文件            
+SharedPreferences                                                    保存Key-Value类型数据      /data/data/<package name>/shared_prefs
+openFileOutput/openFileInput或FileInputStream/FileOutputStream       流文件                     /data/data/<package name>/files
 Xml                                                                  半结构化存储
 Json                                                                 保存数组或对象
 数据库                                                               保存结构化数据
