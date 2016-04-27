@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products xmlns:android="http://schemas.android.com/apk/res/android">
+    <product>
+        <id>10</id>
+        <name>电脑</name>
+        <price>1314.25</price>
+    </product>
+    <product>
+        <id>20</id>
+        <name>微波炉</name>
+        <price>520</price>
+    </product>
+</products>
