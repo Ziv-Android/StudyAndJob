@@ -236,7 +236,7 @@ group_concat——连接某一列值
     --使用分号(;)分隔符链接name字段的值，输出结果
     select group_concat (name,';') from table1
 
-
+###网络
 
 
 
