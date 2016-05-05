@@ -70,7 +70,7 @@ Service如果是运行在后台的，可以注册接收系统或自定义广播�
 service中可以创建thread，避免ANR。
 Thread在后台运行（Activty stop）的优先级低于后台运行的Service，如果执行系统资源紧张，会优先杀死前一种，后台运行的Service一般情况下不会被杀死，如果被杀死，系统空闲时会重新启动service.
 
-###AIDL服务（进程间通信）
+###AIDL服务（进程间通信）Android Interface Definition Language
 ##AIDL支持的数据类型：
 1 Java的简单类型(int、char、boolean等)。不需要导入(import)
 2 String和CharSequence。不需要导入(import)
