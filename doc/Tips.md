@@ -237,6 +237,21 @@ group_concat——连接某一列值
     select group_concat (name,';') from table1
 
 ###网络
+哪些情况会关闭Socket
+1 直接调用Socket.close方法
+2 只要InputStream和OutputStream有一个关闭，则网络连接自动关闭(必须通过调用InputStream.close/OutputStream.close关闭)
+3 在程序退出时网络连接自动关闭
+4 将Socket对象设为null或在Socket对象未释放的情况写被新的Socket对象覆盖后，由Dalivk虚拟机垃圾回收器回收为Socket对象分配的内存空间时自动关闭网络连接
+
+socket.isClosed(); // 是否处于关闭状态
+socket.isConnected(); // 是否曾经成功连接过
+Socket正在连接的状态判断：isClosed() == false && isConnected() == true;
+ 
+客户端超时分为
+1 连接超时
+    只有通过Socket.connect才能设置。无效的IP或端口将会抛出连接超时异常
+2 读取数据超时
+    可通过Socket.setSoTimeout方法设置读取数据超时时间。方法须在读取数据之前调用，0表示不设置超时时间
 
 
 

@@ -28,19 +28,29 @@ AIDL提供服务，返回Java对象，可执行操作
 Android中有哪些类型的动画，用属性动画实现空间的缩放
 
 简述控制反转(Inversion of Control)的应用场景
+http://www.jb51.net/article/83068.htm
 
 对比分析Web App、Hybrid App与Native App，列举你所用过的Hybrid App框架
 
 如何在不引用第三方工具的情况下防止应用二次打包？并对应用进行简单加固
 
 假如com.google.gson包中的类不允许混淆，并且项目中所有的Bean不允许混淆，但是由于项目是由多人开发，并不确定Bean所在的包，只知道Bean实现了序列化，请手动配置项目的混淆规则
+-keep class com.google.gson.**
+-keep class * extends java.io.Serializable { *;}
+-keep class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
 
 如何实现资源文件的混淆
+http://tech.meituan.com/mt-android-resource-obfuscation.html
 
 什么是65535问题，如何防止或解决65535问题
 
 简述实现Android APK插件化的简单方法
+http://www.trinea.cn/android/android-plugin/
 
 列举常用的Android开源项目及应用场景
+https://github.com/Trinea/android-open-project
+http://www.zhihu.com/question/19804692
 
 手动编写gradle脚本，将libs\arm64-v8a目录下的so库及libs\gson-2.5.jar配置到项目依赖中
