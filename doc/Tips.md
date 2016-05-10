@@ -253,6 +253,16 @@ Socket正在连接的状态判断：isClosed() == false && isConnected() == true
 2 读取数据超时
     可通过Socket.setSoTimeout方法设置读取数据超时时间。方法须在读取数据之前调用，0表示不设置超时时间
 
+Socket类的getter方法
+getPort()                       返回整数形式的服务器端口号
+getRemoteSocketAddress()        返回SocketAddress对象，强转为其子类InetSocketAddress可同时获得服务器IP和端口号
+    ((InetSocketAddress)socket.getRemoteSocketAddress()).getHostName();
+    ((InetSocketAddress)socket.getRemoteSocketAddress()).getPort();
+getLocalAddress()               返回本机的InetAddress对象，可获得本机IP和机器名
+    socket.getLocalAddress().getHostAddress();//当本机绑定多个IP时，返回Socket正在使用的IP地址，ADSL的临时绑定的IP
+    socket.getLocalAddress().getHostName();
+getLocalPort()                  获得Socket对象所绑定的本机的一个端口号。若未绑定，则返回一个从1024~65535之间的一个随机数
+getLocalSocketAddress()
 
 
 

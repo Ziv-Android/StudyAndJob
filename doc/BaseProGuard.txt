@@ -1,0 +1,224 @@
+################在app的build.gradle文件中添加#####################
+#    buildTypes {
+#        release {
+#            debuggable true
+#            jniDebuggable true
+#            signingConfig signingConfigs.myConfig
+#            minifyEnabled false
+#            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+#        }
+#        debug {
+#            debuggable true
+#            jniDebuggable true
+#            signingConfig signingConfigs.myConfig
+#            minifyEnabled true
+#            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+#        }
+#    }
+##################################################################
+# 可以在调试的时候测试混淆错误，方便抓取Log日志 ##################
+##################################################################
+#####记录生成的日志数据,gradle build时在本项目根目录输出##########
+#apk 包内所有 class 的内部结构	dump.txt
+#未混淆的类和成员		seeds.txt
+#列出从 apk 中删除的代码	unused.txt
+#混淆前后的映射			mapping.txt
+#####记录生成的日志数据，gradle build时 在本项目根目录输出-end#####
+
+#指定代码的压缩级别(比率) 0~7
+-optimizationpasses 5
+#包名不混合大小写，不使用大小写混合类名
+-dontusemixedcaseclassnames
+#不去忽略非公共的库类，不跳过(混淆) jars中的 非public classes   默认选项
+#即应用程序引入的有jar包,并且想混淆jar包里面的class
+-dontskipnonpubliclibraryclasses
+#不预校验
+-dontpreverify
+#不启用optimization，使用后，“-optimizations”无效
+-dontoptimize
+#shrink，测试后发现会将一些无效代码给移除，即没有被显示调用的代码，shrink操作默认启用，每个optimization步骤后，都会执行一步shrink。测试后发现是全局性的，且即便使用了-keep 开启shrink，也无效
+#不启用 shrink
+-dontshrink
+#避免混淆泛型 如果混淆报错建议关掉 类型转换错误
+-keepattributes Signature
+#不混淆输入的类文件 
+-dontobfuscate 
+#屏蔽警告，继续执行
+-ignorewarnings 
+#混淆时是否记录日志，打印详细
+-verbose
+# 混淆时所采用的算法
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+#保护注解
+-keepattributes *Annotation*
+#打印配置文件
+-printconfiguration [filename]
+
+
+# 混淆时可能被移除下面这些东西，如果想保留，需要用该选项。对于一般注解处理如 -keepattributes *Annotation*
+# attribute_filter : Exceptions, Signature, Deprecated, SourceFile, SourceDir, LineNumberTable,
+#LocalVariableTable, LocalVariableTypeTable, Synthetic,
+#EnclosingMethod, RuntimeVisibleAnnotations, RuntimeInvisibleAnnotations, RuntimeVisibleParameterAnnotations,
+#RuntimeInvisibleParameterAnnotations, and AnnotationDefault.
+
+#保护在清单文件中注册的组件
+-keep public class * extends android.app.Fragment
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+
+#google建议保护的类
+-keep public class * extends android.app.Application
+-keep public class * extends android.preference.Preference
+-keep public class com.android.vending.licensing.ILicensingService
+-keep public class android.app.backup.BackupAgentHelper
+
+#保护v4包
+-keep class android.support.v4.** { *; }
+-dontwarn android.support.v4.**
+
+-keep public class * extends android.support.v4.**
+-keep public class * extends android.app.Fragment
+#保护fastjson
+-keep class com.alibaba.fastjson.** { *; }
+-dontwarn com.alibaba.fastjson.**
+
+-keep public class * extends com.alibaba.fastjson.**
+
+#保护gson
+-keep class com.google.gson.stream.** { *; }
+
+#保持 native 方法不被混淆
+-keepclasseswithmembernames class * {
+native <methods>;
+}
+
+#保持自定义控件类不被混淆
+-keepclasseswithmembernames class * {
+public <init>(android.content.Context, android.util.AttributeSet);
+}
+-keepclasseswithmembernames class * {
+public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+} 
+
+#保持枚举 enum 类不被混淆
+-keepclassmembers enum * {
+public static **[] values();
+public static ** valueOf(java.lang.String);
+}
+
+#实现 Parcelable 不被混淆，如 AIDL文件
+-keep class * implements android.os.Parcelable {
+public static final android.os.Parcelable$Creator *;
+}
+#实现 Serializable 不被混淆
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    static final java.io.ObjectStreamField[] serialPersistentFields;
+    !static !transient <fields>;
+    !private <fields>;
+    !private <methods>;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+#不混淆资源R类
+-keepclassmembers class **.R$* {
+    *;
+}
+
+#保护Javascript
+-keepattributes JavascriptInterface
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}
+
+
+# 过滤第三方包的混淆：其中packagename为第三方包的包名
+# -keep class packagename.** {*;}
+
+#保持自己定义的类不被混淆
+#-keep class MyClass;   
+#如果有数据解析，保留所有的Bean类
+
+#低版本 SDK 下，项目中同时包含 proguard.cfg 和 project.properties 文件，则只需在 project.properties 文件末尾添加 proguard.config=proguard.cfg 再将项目 Export 即可。
+#高版本 SDK 下，项目中同时包含 proguard-project.txt 和 project.properties 文件，这时需要在 proguard-project.txt 文件中进行如下信息的配置，然后再将项目 Export 即可。
+
+#验证打包效果
+#利用了apktool的反编译工具，把打包文件又解压了看了一下，如果包路径、类名、变量名、方法名这些变化和你期望一致，那就OK了。命令：
+
+#apktool.bat d xxx.apk destdir
+
+
+#ProGuard打包混淆报错
+#can't find superclass or interface 找不到相关的类或者方法，因为工程引入了第三方包，混淆的时候如果把第三方包也混淆了，那么相关的类在使用这些包的时候就会找不到相关方法。
+#-dontwarn com.alipay.**
+#-keep class com.alipay.** { *;}
+#一定要根据日志信息来确定忽略哪些jar包和保留哪些类，没出错的包就不要忽略和保留了，否则可能会产生OutOfMemoryError
+
+#执行混淆的java版本必须和编译版本一致,否则会报错:
+#Error:ProGuard cant read proguard_input0.jar
+
+#通过 Android Studio进行 混淆代码时，默认已经将 lib目录中的 jar 都已经添加到打包脚本中，所以不需要再次手动添加，否则会出现“ java.io.IOException: The same input jar is specified twice” 错误。
+
+#将一个被混淆过的堆栈跟踪信息还原成一个可读的信息
+#retrace.bat -verbose mapping.txt obfuscated_trace.txt
+
+
+#一些常用包的Proguard配置
+#
+#下面再写一些我在项目中使用到的一些第三方包需要单独配置的混淆配置
+# 
+#ShareSDK混淆注意
+#-keep class android.net.http.SslError
+#-keep class android.webkit.**{*;}
+#-keep class cn.sharesdk.**{*;}
+#-keep class com.sina.**{*;}
+#-keep class m.framework.**{*;}
+#
+# 
+#Gson混淆配置
+#-keep attributes *Annotation*
+#-keep class sun.misc.Unsafe { *; }
+#-keep class com.idea.fifaalarmclock.entity.***
+#-keep class com.google.gson.stream.** { *; } 
+#
+# 
+#Umeng sdk混淆配置
+#-keepclassmembers class * {
+#   public <init>(org.json.JSONObject);
+#}
+#-keep class com.umeng.**
+#-keep public class com.idea.fifaalarmclock.app.R$*{
+#    public static final int *;
+#}
+#-keep public class com.umeng.fb.ui.ThreadView {
+#}
+#
+#-dontwarn com.umeng.**
+#-dontwarn org.apache.commons.**
+#-keep public class * extends com.umeng.**
+#-keep class com.umeng.** {*; }
+#
+#
+#支付宝
+#-keep class com.alipay.android.app.IAliPay{*;}
+#-keep class com.alipay.android.app.IAlixPay{*;}
+#-keep class com.alipay.android.app.IRemoteServiceCallback{*;}
+#-keep class com.alipay.android.app.lib.ResourceMap{*;}
+#
+#
+#信鸽推送
+#-keep class com.tencent.android.tpush.**  {* ;}
+#-keep class com.tencent.mid.**  {* ;}
+
+
+#http://my.oschina.net/sammy1990/blog/271306#OSC_h4_3
+#http://stackoverflow.com/questions/22670059/error-proguard-unsupported-class-version-number
+#http://blog.csdn.net/jjwwmlp456/article/details/44977721

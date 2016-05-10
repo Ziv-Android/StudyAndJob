@@ -54,3 +54,6 @@ https://github.com/Trinea/android-open-project
 http://www.zhihu.com/question/19804692
 
 手动编写gradle脚本，将libs\arm64-v8a目录下的so库及libs\gson-2.5.jar配置到项目依赖中
+
+Retrofit与okHttp区别是什么呢？什么情况下用Retrofit比okHttp方便？
+retrofit相当于是okhttp的辅助框架，极大的简化了网络交互
