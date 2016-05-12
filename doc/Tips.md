@@ -237,7 +237,7 @@ group_concat——连接某一列值
     select group_concat (name,';') from table1
 
 ###网络
-哪些情况会关闭Socket
+##哪些情况会关闭Socket
 1 直接调用Socket.close方法
 2 只要InputStream和OutputStream有一个关闭，则网络连接自动关闭(必须通过调用InputStream.close/OutputStream.close关闭)
 3 在程序退出时网络连接自动关闭
@@ -247,13 +247,13 @@ socket.isClosed(); // 是否处于关闭状态
 socket.isConnected(); // 是否曾经成功连接过
 Socket正在连接的状态判断：isClosed() == false && isConnected() == true;
  
-客户端超时分为
+##客户端超时分为
 1 连接超时
     只有通过Socket.connect才能设置。无效的IP或端口将会抛出连接超时异常
 2 读取数据超时
     可通过Socket.setSoTimeout方法设置读取数据超时时间。方法须在读取数据之前调用，0表示不设置超时时间
 
-Socket类的getter方法
+##Socket类的getter方法
 getPort()                       返回整数形式的服务器端口号
 getRemoteSocketAddress()        返回SocketAddress对象，强转为其子类InetSocketAddress可同时获得服务器IP和端口号
     ((InetSocketAddress)socket.getRemoteSocketAddress()).getHostName();
@@ -262,8 +262,23 @@ getLocalAddress()               返回本机的InetAddress对象，可获得本�
     socket.getLocalAddress().getHostAddress();//当本机绑定多个IP时，返回Socket正在使用的IP地址，ADSL的临时绑定的IP
     socket.getLocalAddress().getHostName();
 getLocalPort()                  获得Socket对象所绑定的本机的一个端口号。若未绑定，则返回一个从1024~65535之间的一个随机数
-getLocalSocketAddress()
+getLocalSocketAddress()         返回SocketAddress对象，强转为其子类InetSocketAddress可同时获得本地IP和Socket对象所绑定的端口号
+    ((InetSocketAddress)socket.getLocalSocketAddress()).getHostName();
+    ((InetSocketAddress)socket.getLocalSocketAddress()).getPort();
 
+##Socket选项，定义在java.net.SocketOptions接口中(8个)
+// 关闭Nagle算法，无论数据包大小及时发送客户端数据，达到实时性要求
+public final static int TCP_NODELAY = 0x0001;
+public final static int SO_REUSEADDR = 0x04;
+public final static int SO_LINGER = 0x0080;
+public final static int SO_TIMEOUT = 0x1006;
+public final static int SO_SNDBUF = 0x1001;
+public final static int SO_RCVBUF = 0x1002;
+public final static int SO_KEEPALIVE = 0x0008;
+public final static int SO_OOBINLINE = 0x1003;
+
+##Nagle算法
+默认情况下，客户端向服务器发送数据时会根据数据包的大小决定是否立即发送。当数据包中的数据很少时，系统会在
 
 
 
